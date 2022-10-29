@@ -2,9 +2,11 @@ package canliyayinoop;
 
 public class CustomerManager {
     private Customer customer;
+    private ICreditManager _CreditManager;
     
-    public CustomerManager(Customer customer){
+    public CustomerManager(Customer customer, ICreditManager creditManager){
         this.customer = customer;
+        this._CreditManager = creditManager;
     }
     
     public void Save(){
@@ -17,5 +19,10 @@ public class CustomerManager {
     
     public void Delete(){
         System.out.println("Müşteri silindi " + customer.getNationalityIdentity());
+    }
+    
+    public void giveCredit(){
+        _CreditManager.Calculate();
+        System.out.println("Kredi verildi");
     }
 }

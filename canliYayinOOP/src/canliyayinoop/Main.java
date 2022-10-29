@@ -3,6 +3,7 @@ public class Main {
 
     public static void main(String[] args) {
         // instance creation 
+        /*
         CreditManager creditManager = new CreditManager();
         creditManager.Calculator();
         
@@ -27,7 +28,11 @@ public class Main {
         person.setFirstName("Beyza");
         person.setLastName("Parlak");
         person.setId(11111);
-        person.setNationalityIdentity("12300000000");
+        person.setNationalityIdentity("12300000000"); */
+        
+        // IOC Container
+        CustomerManager customerManager = new CustomerManager(new Customer(),new MilitaryCreditManager());
+        customerManager.giveCredit();
     }
     
 }
