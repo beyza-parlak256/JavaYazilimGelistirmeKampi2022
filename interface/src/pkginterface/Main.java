@@ -6,11 +6,15 @@ public class Main {
         // interfaceler referans tutucudur
         // interfaceler newlenemezler
         // bağımlılıkları önlemek için katmanlar arası geçişleri interfaceler ile yaparız
-        ICustomerDal customerDal = new OracleCustomerDal();
-        customerDal.Add();
-        ICustomerDal customerDal1 = new MySqlCustomerDal();
-        customerDal1.Add();
+        //ICustomerDal customerDal = new OracleCustomerDal();
+        //customerDal.Add();
+        //ICustomerDal customerDal1 = new MySqlCustomerDal();
+        //customerDal1.Add();
 
+        CustomerManager customerManager = new CustomerManager(new OracleCustomerDal());
+        customerManager.add();
+
+        
     }
 
 }
