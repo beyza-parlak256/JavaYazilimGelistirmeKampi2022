@@ -34,3 +34,5 @@ hs_err_pid*
 /abstractClasses/build/
 /abstractClassesDemo/nbproject/private/
 /abstractClassesDemo/build/
+/interface/nbproject/private/
+/interface/build/
